@@ -30,7 +30,6 @@ public abstract class DBConn {
     	ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
     	try {
     		connect();
-    		int count = 0;
     		String sqlQuery = "SELECT * FROM "+navn;
     		statement = conn.prepareStatement(sqlQuery);
     		
