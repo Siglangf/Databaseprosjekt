@@ -6,6 +6,9 @@ public class run {
 		OvelseController OC = new OvelseController();
 		ApparatController AC = new ApparatController();
 		TreningsoktController TC = new TreningsoktController();
-		OvelsesGruppeController OGC = new OvelsesGruppeController();
+		OvelsesGruppeController OGC = new OvelsesGruppeController();;
+		
+		
+		OC.regApperatOvelse("Bicepscurls", "Armer", 20, 4, "Vekter");
 	}
 }
