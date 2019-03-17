@@ -4,15 +4,14 @@ import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 
-public class Apparat extends DBConn {
+public class ApparatController extends DBConn {
 	
-	public Apparat() {
+	public ApparatController() {
 		super("Apparat");
 		
 	}
 
 	public void regApparat(String Navn, String Beskrivelse) {
-		
 		try {
 			this.connect();
 			String sqlQuery = "INSERT INTO Apparat (Navn,Beskrivelse) VALUES (?,?)";
@@ -26,4 +25,3 @@ public class Apparat extends DBConn {
 		}
 	}
 }
-	

@@ -3,9 +3,9 @@ package Databaseøving;
 import java.sql.Date;
 import java.sql.Time;
 
-public class Treningsokt extends DBConn {
+public class TreningsoktController extends DBConn {
 
-	public Treningsokt() {
+	public TreningsoktController() {
 		super("Treningsokt");
 	}
 	

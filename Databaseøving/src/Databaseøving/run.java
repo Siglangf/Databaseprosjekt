@@ -3,6 +3,9 @@ import java.util.ArrayList;
 
 public class run {
 	public static void main(String [] args) {
-		OvelsesGruppe t = new OvelsesGruppe();
+		OvelseController OC = new OvelseController();
+		ApparatController AC = new ApparatController();
+		TreningsoktController TC = new TreningsoktController();
+		OvelsesGruppeController OGC = new OvelsesGruppeController();
 	}
 }

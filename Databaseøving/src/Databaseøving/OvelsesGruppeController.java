@@ -1,8 +1,8 @@
 package Databaseøving;
 
-public class OvelsesGruppe extends DBConn {
+public class OvelsesGruppeController extends DBConn {
 
-	public OvelsesGruppe()  {
+	public OvelsesGruppeController()  {
 		super("OvelsesGruppe");
 	}
 	public void regOvelsesGruppe(String type) {
