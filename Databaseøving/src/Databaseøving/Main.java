@@ -5,16 +5,19 @@ import java.sql.Time;
 
 public class Main {
 
-	
+
 	public static void main(String [] args) {
-		OvelseController OC = new OvelseController();
-		ApparatController AC = new ApparatController();
-		TreningsoktController TC = new TreningsoktController();
-		OvelsesGruppeController OGC = new OvelsesGruppeController();;
-		
-		Date date = Date.valueOf("2019-11-1");
-		Time time = Time.valueOf("15:00:00");
-		TC.regTreningsokt(date, time, 150, 2, 4);
-		
+	System.out.println("Hei og velkommen til treningsappen")
+	System.out.println("Registrer apparat (1)")
+	System.out.println("Registrer øvelse (2)")
+	System.out.println("Registrer ny treningsøkt (3)")
+	System.out.println("Vis n siste treningsøkter (4)")
+	System.out.println("Lag ny øvelsesgruppe (5)")
+	System.out.println("Finn øvelser i øvelsesgruppe (6)")
+	System.out.println("Finn total treningsmengde i et gitt tidsintervall (7)")
+	Scanner sc = new Scanner(System.in)
+	String input = sc.nextLine();
+	if ()
+
 	}
 }
