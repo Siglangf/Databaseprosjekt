@@ -11,18 +11,25 @@ public class TreningsoktController extends DBConn {
 		super("Treningsokt");
 	}
 	
-	public void regTreningsokt(Date dato, Time tidspunkt, float varighet, int personligForm,int prestasjon) {
+	public void regTreningsokt(String dato, String tidspunkt, float varighet, int personligForm,int prestasjon, String notat) {
 		try {
 			
 			this.connect();
 			String sqlQuery = "INSERT INTO Treningsokt (Dato,Tidspunkt,Varighet,PersonligForm,Prestasjon) VALUES (?,?,?,?,?)";
 			statement = conn.prepareStatement(sqlQuery);
-			statement.setDate(1,dato);
-			statement.setTime(2, tidspunkt);
+			statement.setString(1,dato);
+			statement.setString(2, tidspunkt);
 			statement.setFloat(3, varighet);
 			statement.setInt(4, personligForm);
 			statement.setInt(5,prestasjon);
 			statement.execute();
+			int oktID = this.getID("Dato", dato);
+			sqlQuery = "INSERT INTO Notat (Tekst,TreningsoktID) VALUES (?,?)";
+			statement = conn.prepareStatement(sqlQuery);
+			statement.setString(1, notat);
+			statement.setInt(2, oktID);
+			statement.execute();
+			
 		}
 		catch (Exception e) {
 			System.out.println(e);
